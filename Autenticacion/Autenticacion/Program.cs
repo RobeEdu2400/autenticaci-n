@@ -73,8 +73,7 @@ namespace Autenticacion
                     while (nombre == null)
                         nombre = Console.ReadLine();
 
-                    File.WriteAllText(nombre, Nombre+" "+resultadoSalt+" "+resultadoHash);
-
+                    File.AppendAllText(nombre,Nombre+" "+resultadoSalt+" "+resultadoHash+string.Format(Environment.NewLine));
                 }
             } while (Menu != 0);
         }
